@@ -45,7 +45,7 @@ public class uploadscore {
 			String select="select * from vovel.user";
 			Statement stmt=con.createStatement();
 			ResultSet res=stmt.executeQuery(select);
-			while(res.next()==true)
+			while(res.next()==false)
 			{
 				int id=res.getInt(1);
 				String name=res.getString(2);
@@ -53,7 +53,18 @@ public class uploadscore {
 				System.out.println(id+""+name+"" +score);
 		
 			}
+			
+	   }
+		public void rank()throws SQLException
+		{
+			String select="select * from vovel.user";
+			Statement stmt=con.createStatement();
+			ResultSet res=stmt.executeQuery(select);
+		
+	  
+		}
+		
 	}
 		
-}
+
 
